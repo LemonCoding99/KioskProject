@@ -26,8 +26,8 @@ public class Main {
 
         // 메뉴 출력하기
         for(int i = 0; i < menuItems.size(); i++) {
-            MenuItem burgerItem = menuItems.get(i);
-            System.out.println((i+1) + ". " + burgerItem.burgerName + " | W " + burgerItem.burgerPrice + " | " + burgerItem.burgerInfo);
+            MenuItem selectedBurger = menuItems.get(i);
+            System.out.println((i+1) + ". " + selectedBurger.burgerName + " |  " + selectedBurger.burgerPrice + " | " + selectedBurger.burgerInfo);
         }
         System.out.println(0 + ". 종료 | 프로그램 종료");  // 종료는 종료문구 따로 출력
 
@@ -45,8 +45,8 @@ public class Main {
             }
             // 2. 입력값이 0보다 큰 경우 번호에 맞는 burger 정보 출력하기
             if ((number > 0) && (number <= menuItems.size())) {
-                MenuItem burgerNumber = menuItems.get(number - 1);// 리스트의 (number-1)번째 요소 가져오기
-                System.out.println((burgerNumber.burgerName + " | W " + burgerNumber.burgerPrice + " | " + burgerNumber.burgerInfo));
+                MenuItem selectedBurger = menuItems.get(number - 1);// 리스트의 (number-1)번째 요소 가져오기
+                System.out.println((selectedBurger.burgerName + " | W " + selectedBurger.burgerPrice + " | " + selectedBurger.burgerInfo));
             } else {  // 리스트에 있는 번호가 입력되지 않은 경우 재입력 요청하기
                 System.out.println("번호가 잘못 입력되었습니다. 다시 입력해주세요."); // 버거 리스트의 범위값을 넘어갔을 경우 재입력 요청
             }
