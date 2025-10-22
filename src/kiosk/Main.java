@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<MenuItem> menuItems = new ArrayList<MenuItem>(); // 리스트 선언
+        List<MenuItem> menuItems = new ArrayList<>(); // 리스트 선언
         Scanner scanner = new Scanner(System.in);
 
         // 시작문구 출력하기
@@ -38,24 +38,18 @@ public class Main {
             int number =scanner.nextInt();
 
             // 입력값에 따른 출력값 지정하기
-            switch (number) {
-                case 0:
-                    System.out.println("프로그램을 종료합니다.");
-                    System.exit(0);
-                case 1:
-                    System.out.println("ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거");
-                    break;
-                case 2:
-                    System.out.println("SmokeShack    | W 8.9 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거");
-                    break;
-                case 3:
-                    System.out.println("Cheeseburger  | W 6.9 | 포테이토 번과 비프패티, 치즈가 토핑된 치즈버거");
-                    break;
-                case 4:
-                    System.out.println("Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거");
-                    break;
+            // 1. 입력값이 0일 경우 프로그램 종료하기
+            if (number == 0) {
+                System.out.println("프로그램을 종료합니다.");
+                break;
             }
-
+            // 2. 입력값이 0보다 큰 경우 번호에 맞는 burger 정보 출력하기
+            if ((number > 0) && (number <= menuItems.size())) {
+                MenuItem burgerNumber = menuItems.get(number - 1);// 리스트의 (number-1)번째 요소 가져오기
+                System.out.println((burgerNumber.burgerName + " | W " + burgerNumber.burgerPrice + " | " + burgerNumber.burgerInfo));
+            } else {  // 리스트에 있는 번호가 입력되지 않은 경우 재입력 요청하기
+                System.out.println("번호가 잘못 입력되었습니다. 다시 입력해주세요."); // 버거 리스트의 범위값을 넘어갔을 경우 재입력 요청
+            }
         }
     }
 }
