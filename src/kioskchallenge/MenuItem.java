@@ -1,6 +1,6 @@
-package kiosk;
+package kioskchallenge;
 
-public class MenuItem {
+class MenuItem {
     // 햄버거의 이름, 가격 설명
     // 1. 속성
     private final String name;
