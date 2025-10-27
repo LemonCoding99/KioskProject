@@ -66,7 +66,7 @@ public class Kiosk {
                                 System.out.println("번호가 잘못 입력되었습니다. 다시 입력해주세요.");  // 번호가 잘못 입력된 경우
                             }
                         } catch (Exception e) {
-                            System.out.println("메뉴 번호만 입력하세요.");  // 상세메뉴 선택에서 메뉴번호 외의 번호가 입력된 경우
+                            System.out.println("메뉴 번호만 입력하세요.");  // 숫자외의 것이 입력된 경우
                             scanner.nextLine();
                         }
                     }
@@ -74,7 +74,7 @@ public class Kiosk {
                     System.out.println("번호가 잘못 입력되었습니다. 다시 입력해주세요.");  // 번호가 잘못 입력된 경우
                 }
             } catch (Exception e) {
-                System.out.println("메뉴 번호만 입력하세요.");  // 카테고리메뉴 선택에서 메뉴번호 외의 번호가 입력된 경우
+                System.out.println("메뉴 번호만 입력하세요.");  // 숫자외의 것이 입력된 경우
             }
         }
     }
