@@ -1,20 +1,31 @@
 package kiosk;
 
+import java.util.List;
+
 class MenuItem {
     // 햄버거의 이름, 가격 설명
 
     // 1. 속성
-    String burgerName;
-    int burgerPrice;
-    String burgerInfo;
+    private String name;
+    private int price;
+    private String info;
 
     // 2. 생성자
-    MenuItem(String burgerName, int BurgerPrice, String burgerInfo) {
-        this.burgerName = burgerName;
-        this.burgerPrice = BurgerPrice;
-        this.burgerInfo = burgerInfo;
+    MenuItem(String name, int price, String info) {
+        this.name = name;
+        this.price = price;
+        this.info = info;
     }
 
     // 3. 기능
-
+    // 게터
+    public String getName() {
+        return name;
+    }
+    public int getPrice() {
+        return price;
+    }
+    public String getInfo() {
+        return info;
+    }
 }
