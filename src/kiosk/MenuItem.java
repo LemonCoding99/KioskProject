@@ -1,14 +1,11 @@
 package kiosk;
 
-import java.util.List;
-
 class MenuItem {
     // 햄버거의 이름, 가격 설명
-
     // 1. 속성
-    private String name;
-    private int price;
-    private String info;
+    private final String name;
+    private final int price;
+    private final String info;
 
     // 2. 생성자
     MenuItem(String name, int price, String info) {

@@ -6,7 +6,7 @@ import java.util.List;
 public class Menu {
 
     // 1. 속성
-    private String category;  // 메뉴 카테고리 속성
+    private final String category;  // 메뉴 카테고리 속성
     List<MenuItem> menuItems = new ArrayList<>(); // MenuItem 클래스 List로 관리
 
     // 2. 생성자

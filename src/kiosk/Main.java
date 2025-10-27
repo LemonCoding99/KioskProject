@@ -2,11 +2,9 @@ package kiosk;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Scanner 선언
         List<Menu> categoryList = new ArrayList<>();  // categoryList 리스트 선언
 
         // Menu 카테고리 추가하기

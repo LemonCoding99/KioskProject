@@ -20,7 +20,6 @@ public class Kiosk {
     public void printMenu() {
         System.out.println("[ MAIN MENU ]");
         for(int i = 0; i < categoryList.size(); i++) {
-            Menu selectedMenu = categoryList.get(i);  // 선택된 카테고리 메뉴 카테고리리스트에서 가져옴
             System.out.println((i+1) + ". " + categoryList.get(i).getCategory());  // i번째 카테고리 가져오기
         }
         System.out.println(0 + ". 종료    | 종료하기");  // 0입력시 종료
