@@ -16,9 +16,7 @@ class   MenuItem {
 
     // 3. 기능
     // 게터
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
     public int getPrice() {
         return price;
     }
